@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jany & Juan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="musica/musica-romantica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div class="coracoes"></div>
+
+  <header>
+    <h1>Jany & Juan</h1>
+    <p>Desde 11/09/2002 — Nosso amor em pixels</p>
+  </header>
+
+  <section class="main-photo">
+    <img src="fotos/nossa-foto-principal.jpg" alt="Foto fofa do casal" />
+    <p class="legenda">"Você é meu lugar favorito no mundo todo."</p>
+  </section>
+
+  <section class="sobre">
+    <h2>Sobre nós</h2>
+    <p>
+      Um amor leve, divertido e verdadeiro. Feito de companheirismo, piadas internas e muita conexão.
+    </p>
+  </section>
+
+  <section class="galeria">
+    <h2>Galeria do amor</h2>
+    <div class="fotos">
+      <img src="fotos/foto1.jpg" alt="Foto 1" />
+      <img src="fotos/foto2.jpg" alt="Foto 2" />
+      <img src="fotos/foto3.jpg" alt="Foto 3" />
+      <img src="fotos/foto4.jpg" alt="Foto 4" />
+      <img src="fotos/foto5.jpg" alt="Foto 5" />
+      <img src="fotos/foto6.jpg" alt="Foto 6" />
+    </div>
+  </section>
+
+  <footer>
+    <p>Feito com amor por Jany — 2025</p>
+  </footer>
+
+  <script>
+    const coracoes = document.querySelector(".coracoes");
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+      coracoes.appendChild(heart);
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }, 300);
+  </script>
+</body>
+</html>
